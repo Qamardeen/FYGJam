@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         float inputX = Input.GetAxisRaw("Horizontal"); 
         float inputY = Input.GetAxisRaw("Vertical");
 
-        currMovement = new Vector3(inputX, inputY, playerSpeed);
+        currMovement = new Vector3(inputX, inputY, 0);
 
         currMovement = currMovement * playerSpeed * Time.deltaTime;
 
