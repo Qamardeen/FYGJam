@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b9c2d74943ef2f7488832c262cd09203
+guid: 4a57cb85fdd505f41b877061840ee5ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,43 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ezgif.com-gif-maker_0
+      name: girl_sprite_shord-Sheet (1)_0
       rect:
         serializedVersion: 2
-        x: 192
+        x: 0
         y: 0
-        width: 192
-        height: 192
+        width: 288
+        height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 525db323ded6f734392cb6584b1d9294
-      internalID: -1393857929
+      spriteID: 0b35773e0864f2d49a0fc262e2ab98b4
+      internalID: 254825195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif.com-gif-maker_1
+      name: girl_sprite_shord-Sheet (1)_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 288
         y: 0
-        width: 192
-        height: 192
+        width: 288
+        height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd09eebc89218f54585b5a2601d17a70
-      internalID: 1576011478
+      spriteID: c94da820fb23b53448a296f84a964ee5
+      internalID: -1384487501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girl_sprite_shord-Sheet (1)_2
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 288
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aad352b6e68266f47afc807de057bbbe
+      internalID: 1033142577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girl_sprite_shord-Sheet (1)_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42013165c780cc647ba60dc4f82eda6c
+      internalID: -924334020
       vertices: []
       indices: 
       edges: []
@@ -157,8 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ezgif.com-gif-maker_1: 1576011478
-      ezgif.com-gif-maker_0: -1393857929
+      girl_sprite_shord-Sheet (1)_2: 1033142577
+      girl_sprite_shord-Sheet (1)_1: -1384487501
+      girl_sprite_shord-Sheet (1)_0: 254825195
+      girl_sprite_shord-Sheet (1)_3: -924334020
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aaabbf5637732804599ebab09a18aa48
+guid: d031f80a28b79364fa13d04547dd0613
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,85 +105,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: girl_sprite_stupid-Sheet_0
+      name: girl_sprite_shord-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 192
-        height: 192
+        width: 288
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 816ad056a198cce43a3083d4800456ea
-      internalID: 1082206157
+      spriteID: 678dfabb84a163d4ab7686b0b2f4d257
+      internalID: 1341365919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl_sprite_stupid-Sheet_1
+      name: girl_sprite_shord-Sheet_1
       rect:
         serializedVersion: 2
-        x: 192
+        x: 288
         y: 0
-        width: 192
-        height: 192
+        width: 288
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70d549bbbb898934595dd7efc1ee0dd9
-      internalID: -832664211
+      spriteID: cc3c752c3359ea74cb661aefdee45034
+      internalID: 1570626686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: girl_sprite_stupid-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 192
-        height: 192
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66b1c5d8f4f003d4cac8a19afa84b9c3
-      internalID: -1360302110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: girl_sprite_stupid-Sheet_3
+      name: girl_sprite_shord-Sheet_2
       rect:
         serializedVersion: 2
         x: 576
         y: 0
-        width: 192
-        height: 192
+        width: 288
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 479ce0bce3a5d3442ae8f4719fb14300
-      internalID: 1089872137
+      spriteID: f6a936cc8d41cb744a2a4b0440728618
+      internalID: 2118833755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: girl_sprite_shord-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 288
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9114ffcda63b6344689f2372782a429e
+      internalID: -125434970
       vertices: []
       indices: 
       edges: []
@@ -199,10 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      girl_sprite_stupid-Sheet_2: -1360302110
-      girl_sprite_stupid-Sheet_3: 1089872137
-      girl_sprite_stupid-Sheet_1: -832664211
-      girl_sprite_stupid-Sheet_0: 1082206157
+      girl_sprite_shord-Sheet_2: 2118833755
+      girl_sprite_shord-Sheet_1: 1570626686
+      girl_sprite_shord-Sheet_0: 1341365919
+      girl_sprite_shord-Sheet_3: -125434970
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
