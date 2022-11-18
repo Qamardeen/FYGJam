@@ -6,6 +6,8 @@ public class CameraRunner : MonoBehaviour
 {
 
     public Transform player;
+    public float cameraDistance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class CameraRunner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, -10);
+        transform.position = new Vector3(player.position.x, player.position.y, cameraDistance);
     }
 }
