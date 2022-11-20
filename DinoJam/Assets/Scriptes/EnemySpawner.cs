@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public GameObject player;
     public GameObject enemy;
     public float timeBtwSpawn;
     public float startTimeBtwSpawn = 5;
     public float decreaseTime;
     public float minTime = 0.65f;
-    public int spawnSide;
+    private int spawnSide;
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         spawnSide = Random.Range(0, 4);
     }
 
@@ -21,23 +23,27 @@ public class EnemySpawner : MonoBehaviour
         {
             if (spawnSide == 0)
             {
-                Instantiate(enemy, new Vector3(-15f, Random.Range(-15f, 15f), 0f), Quaternion.identity);
+                Instantiate(enemy, new Vector3(player.transform.position.x - 15f, player.transform.position.y + Random.Range(-15f, 15f), 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
             }
             if (spawnSide == 1)
             {
-                Instantiate(enemy, new Vector3(15f, Random.Range(-15f, 15f), 0f), Quaternion.identity);
+                Instantiate(enemy, new Vector3(player.transform.position.x + 15f, player.transform.position.y + Random.Range(-15f, 15f), 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
             }
             if (spawnSide == 2)
             {
-                Instantiate(enemy, new Vector3(Random.Range(-12, 12), 15f, 0f), Quaternion.identity);
+                Instantiate(enemy, new Vector3(player.transform.position.x + Random.Range(-12, 12), player.transform.position.y + 15f, 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
             }
             if (spawnSide == 3)
             {
-                Instantiate(enemy, new Vector3(Random.Range(-12, 12), -15f, 0f), Quaternion.identity);
+                Instantiate(enemy, new Vector3(player.transform.position.x + Random.Range(-12, 12), player.transform.position.y - 15f, 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
+            }
+            if(startTimeBtwSpawn >= minTime)
+            {
+                startTimeBtwSpawn -= decreaseTime;
             }
             timeBtwSpawn = startTimeBtwSpawn;
         }
