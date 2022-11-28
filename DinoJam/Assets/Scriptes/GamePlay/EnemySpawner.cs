@@ -10,7 +10,9 @@ public class EnemySpawner : MonoBehaviour
     public float startTimeBtwSpawn = 5;
     public float decreaseTime;
     public float minTime = 0.65f;
+
     private int spawnSide;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
