@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DinoCharge : MonoBehaviour
 {
+    GameObject player;
     public Transform lookDirection;
     public float speed;
     public float decayTime;
@@ -13,6 +14,7 @@ public class DinoCharge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         lookDirection = GameObject.Find("FirePoint").transform;
         moveVec = lookDirection.up * speed * Time.fixedDeltaTime;
         StartCoroutine(DestroyBullet());

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3334466418193068962}
   - component: {fileID: 5746574822723905369}
   - component: {fileID: 5502132461934235368}
-  - component: {fileID: 2364091507241499206}
   m_Layer: 0
   m_Name: Square
   m_TagString: Enemy
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 806667362, guid: 19c816836a9b0c1409a12417bbb0bad7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -162,15 +161,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2364091507241499206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509275073311197192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99d7d2f4be958e14691f61e8db9a8530, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
