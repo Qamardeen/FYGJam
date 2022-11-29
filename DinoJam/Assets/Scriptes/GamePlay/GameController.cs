@@ -11,7 +11,8 @@ public class GameController : MonoBehaviour
 
     public GameObject hudContainer, gameOverPanel;
     public int numOfBosses;
-    [SerializeField] TextMeshProUGUI scoreCounter, timeCounter, timeplayed, finalScore;
+    public int countdownTime;
+    [SerializeField] TextMeshProUGUI scoreCounter, timeCounter, timeplayed, finalScore , countdownText;
 
     public bool gamePlaying { get; private set; }
 
@@ -33,9 +34,10 @@ public class GameController : MonoBehaviour
         bossesSlain = 0;
         enemiesSlain = 0;
         scoreCounter.text = "Score: " + enemiesSlain;
+        timeCounter.text = "Time: 00:00.00";
         gamePlaying = false;
 
-        BeginGame();
+        StartCoroutine(CountdownToStart());
     }
 
     private void Update()
@@ -96,5 +98,21 @@ public class GameController : MonoBehaviour
         string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
         timeplayed.text = timePlayingStr;
         finalScore.text = scoreCounterStr;
+    }
+
+    IEnumerator CountdownToStart()
+    {
+        while (countdownTime > 0)
+        {
+            countdownText.text = countdownTime.ToString();
+            yield return new WaitForSeconds(1f);
+            countdownTime--;
+        }
+
+        BeginGame();
+        countdownText.text = "GO!";
+
+        yield return new WaitForSeconds(1f);
+        countdownText.gameObject.SetActive(false);
     }
 }
