@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shooting : MonoBehaviour
+public class TrikeCharge : MonoBehaviour
 {
     
     public Transform FirePoint;
-    public GameObject bulletPrefab;
+    public GameObject dinoPrefab;
 
     public float fireRate;
 
@@ -23,7 +23,7 @@ public class Shooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && canShoot)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && canShoot)
         {
             Shoot();
         }
@@ -37,7 +37,7 @@ public class Shooting : MonoBehaviour
     void Shoot()
     {
         canShoot = false;
-        GameObject bullet = Instantiate(bulletPrefab, FirePoint.position, FirePoint.rotation);
+        GameObject bullet = Instantiate(dinoPrefab, FirePoint.position, Quaternion.Euler(0,0,0));
         StartCoroutine(ShotCoolDown());
         //Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         //rb.AddForce(FirePoint.up * bulletForce, ForceMode2D.Impulse);

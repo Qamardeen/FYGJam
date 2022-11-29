@@ -13,7 +13,7 @@ public class BossHP : MonoBehaviour
             hitpoints--;
             if (hitpoints <= 0)
             {
-                GameController.gameController.SlayTier1Enemy();
+                GameController.gameController.SlayBossEnemy();
                 Destroy(gameObject);
             }
         }

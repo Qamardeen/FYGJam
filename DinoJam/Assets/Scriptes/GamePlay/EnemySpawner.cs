@@ -25,22 +25,22 @@ public class EnemySpawner : MonoBehaviour
         {
             if (spawnSide == 0)
             {
-                Instantiate(enemy, new Vector3(player.transform.position.x - 15f, player.transform.position.y + Random.Range(-15f, 15f), 0f), Quaternion.identity);
+                Instantiate(enemy, new Vector3(player.transform.position.x - 35f, player.transform.position.y + Random.Range(-25f, 25f), 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
             }
             if (spawnSide == 1)
             {
-                Instantiate(enemy, new Vector3(player.transform.position.x + 15f, player.transform.position.y + Random.Range(-15f, 15f), 0f), Quaternion.identity);
+                Instantiate(enemy, new Vector3(player.transform.position.x + 35f, player.transform.position.y + Random.Range(-25f, 25f), 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
             }
             if (spawnSide == 2)
             {
-                Instantiate(enemy, new Vector3(player.transform.position.x + Random.Range(-12, 12), player.transform.position.y + 15f, 0f), Quaternion.identity);
+                Instantiate(enemy, new Vector3(player.transform.position.x + Random.Range(-22, 22), player.transform.position.y + 25f, 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
             }
             if (spawnSide == 3)
             {
-                Instantiate(enemy, new Vector3(player.transform.position.x + Random.Range(-12, 12), player.transform.position.y - 15f, 0f), Quaternion.identity);
+                Instantiate(enemy, new Vector3(player.transform.position.x + Random.Range(-22, 22), player.transform.position.y - 25f, 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
             }
             if(startTimeBtwSpawn >= minTime)
