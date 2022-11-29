@@ -43,7 +43,7 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemy, new Vector3(player.transform.position.x + Random.Range(-22, 22), player.transform.position.y - 25f, 0f), Quaternion.identity);
                 spawnSide = Random.Range(0, 4);
             }
-            if(startTimeBtwSpawn >= minTime)
+            if (startTimeBtwSpawn >= minTime)
             {
                 startTimeBtwSpawn -= decreaseTime;
             }
@@ -52,6 +52,11 @@ public class EnemySpawner : MonoBehaviour
         else
         {
             timeBtwSpawn -= Time.deltaTime;
+        }
+
+        if (GameController.gameController.gameOver)
+        {
+            Destroy(this);
         }
     }
 }

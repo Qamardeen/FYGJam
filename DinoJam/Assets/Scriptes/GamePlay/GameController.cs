@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreCounter, timeCounter, timeplayed, finalScore , countdownText;
 
     public bool gamePlaying { get; private set; }
+    public bool gameOver { get; private set; }
 
     private string scoreCounterStr;
     private int enemiesSlain;
@@ -36,6 +37,7 @@ public class GameController : MonoBehaviour
         scoreCounter.text = "Score: " + enemiesSlain;
         timeCounter.text = "Time: 00:00.00";
         gamePlaying = false;
+        gameOver = false;
 
         StartCoroutine(CountdownToStart());
     }
@@ -88,6 +90,7 @@ public class GameController : MonoBehaviour
     private void EndGame()
     {
         gamePlaying = false;
+        gameOver = true;
         Invoke("ShowGameOverPanel", 1.25f);
     }
 

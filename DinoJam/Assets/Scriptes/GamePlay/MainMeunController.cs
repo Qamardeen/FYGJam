@@ -9,4 +9,13 @@ public class MainMeunController : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+
+    public void OnButtonQuitGame()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif 
+    }
 }
