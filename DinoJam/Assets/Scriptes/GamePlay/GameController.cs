@@ -11,10 +11,11 @@ public class GameController : MonoBehaviour
 
     public GameObject hudContainer, gameOverPanel;
     public int numOfBosses;
-    [SerializeField] TextMeshProUGUI scoreCounter, timeCounter;
+    [SerializeField] TextMeshProUGUI scoreCounter, timeCounter, timeplayed, finalScore;
 
     public bool gamePlaying { get; private set; }
 
+    private string scoreCounterStr;
     private int enemiesSlain;
     private int bossesSlain;
     private float startTime, elapsedTime;
@@ -32,34 +33,54 @@ public class GameController : MonoBehaviour
         bossesSlain = 0;
         enemiesSlain = 0;
         scoreCounter.text = "Score: " + enemiesSlain;
-        gamePlaying = true;
+        gamePlaying = false;
+
+        BeginGame();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (gamePlaying)
+        {
+            elapsedTime = Time.time - startTime;
+            timePlaying = TimeSpan.FromSeconds(elapsedTime);
+
+            string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
+            timeCounter.text = timePlayingStr;
+        }
     }
 
     public void SlayTier1Enemy()
     {
         enemiesSlain++;
 
-        string scoreCounterStr = "Score: " + enemiesSlain + bossesSlain * 100;
+        scoreCounterStr = "Score: " + enemiesSlain;
         scoreCounter.text = scoreCounterStr;
     }
 
     public void SlayBossEnemy()
     {
         bossesSlain++;
+        enemiesSlain = enemiesSlain + 100;
 
-        string scoreCounterStr = "Score: " + enemiesSlain + bossesSlain * 100;
+        scoreCounterStr = "Score: " + enemiesSlain;
         scoreCounter.text = scoreCounterStr;
 
         if (bossesSlain >= numOfBosses)
         {
             EndGame();
         }
+    }
+
+    public void SlayPlayer()
+    {
+        EndGame();
+    }
+
+    private void BeginGame()
+    {
+        gamePlaying = true;
+        startTime = Time.time;
     }
 
     private void EndGame()
@@ -72,5 +93,8 @@ public class GameController : MonoBehaviour
     {
         gameOverPanel.SetActive(true);
         hudContainer.SetActive(false);
+        string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
+        timeplayed.text = timePlayingStr;
+        finalScore.text = scoreCounterStr;
     }
 }

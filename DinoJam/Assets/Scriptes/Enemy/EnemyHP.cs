@@ -17,5 +17,15 @@ public class EnemyHP : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        if (collision.gameObject.tag == "Trike")
+        {
+            hitpoints = hitpoints - 5;
+            if (hitpoints <= 0)
+            {
+                GameController.gameController.SlayTier1Enemy();
+                Destroy(gameObject);
+            }
+        }
     }
 }
