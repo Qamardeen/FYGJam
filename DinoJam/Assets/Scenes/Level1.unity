@@ -7261,6 +7261,7 @@ GameObject:
   - component: {fileID: 159153072}
   - component: {fileID: 159153074}
   - component: {fileID: 159153075}
+  - component: {fileID: 159153076}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -7350,6 +7351,21 @@ MonoBehaviour:
   FirePoint: {fileID: 416760365}
   dinoPrefab: {fileID: 8606444193483511805, guid: c90efbd85719ea64ba4f14b377a46a75, type: 3}
   fireRate: 3
+--- !u!114 &159153076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159153070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854151ed5fcdbff48a7488e7a0239bf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirePoint: {fileID: 416760365}
+  dinoPrefab: {fileID: 6195796831576011935, guid: 7013c43ce78207944990ce0d8f9d2fe2, type: 3}
+  fireRate: 5
 --- !u!1 &215596892
 GameObject:
   m_ObjectHideFlags: 0
