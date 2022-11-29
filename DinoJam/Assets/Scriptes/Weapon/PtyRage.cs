@@ -22,7 +22,7 @@ public class PtyRage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha2) && canShoot)
+        if (Input.GetKeyDown(KeyCode.Space) && canShoot)
         {
             Shoot();
         }
@@ -36,7 +36,7 @@ public class PtyRage : MonoBehaviour
     void Shoot()
     {
         canShoot = false;
-        Instantiate(dinoPrefab, FirePoint.position, Quaternion.Euler(0, 0, 0));
+        Instantiate(dinoPrefab);
         StartCoroutine(ShotCoolDown());
     }
 }
